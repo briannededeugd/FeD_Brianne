@@ -1,0 +1,239 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+button,
+summary {
+	cursor: pointer;
+}
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text: #111;
+	--color-background: #eee;
+	--color-nav: #0300a4;
+	--color-links: #0800ff;
+}
+
+/* Regular font */
+@font-face {
+	font-family: Graphik;
+	src: url("../fonts/GraphikRegular.otf");
+}
+
+/* Bold font */
+@font-face {
+	font-family: Graphik-Bold;
+	src: url("../fonts/GraphikBold.otf");
+}
+
+/* Light font */
+@font-face {
+	font-family: Kameron;
+	src: url("../fonts/Kameron-Regular.ttf");
+}
+
+
+
+
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/* jouw code */
+
+.verbergtext {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+body {
+	font-family: Graphik, Arial, Helvetica, sans-serif;
+	margin:0;
+	overflow:hidden;
+	color: var(--color-text);
+}
+
+h1, h2 {
+	font-family: Graphik-Bold, Arial, Helvetica, sans-serif;
+}
+
+a {
+	color: var(--color-links);
+	text-decoration: none;
+	cursor: pointer;
+}
+
+span {
+	font-family: Kameron, Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+
+
+
+/**********/
+/* HEADER */
+/**********/
+
+header {
+	color: #0300a4;
+	/* width: 100%; */
+	/* margin: 0; */
+	display:flex;
+	flex-wrap: wrap;
+}
+
+/* menu button */
+header > button {
+	margin: auto; /* zo weghalen */
+}
+
+/* het uitschuifemenu */
+header nav:nth-of-type(1) {
+	position: fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+
+	background-color: yellow;
+
+	transform: translateX(100%);
+}	
+
+/* tweede menu met iconen */
+header nav:nth-of-type(2) li {
+	display: inline;
+	margin: auto;
+}
+
+header ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+header ul a {
+	text-decoration: none;
+	color: var(--color-text);
+}
+
+header li a {
+	display: inline;
+	margin: .5em;
+}
+
+/* zoeken */
+header form {
+	display: flex;
+	position: relative;
+	width: 100%;
+	flex-shrink:0;
+	order:100;
+
+	background-color: #0300a4;
+}
+
+input[type="text"] {
+	width: 100%;
+	border: none;
+	border-radius: 20em;
+	padding: 1.3em 2em;
+	margin: 1em;
+}
+
+input[placeholder] {
+	color: #f2f2f2;
+}
+
+form button {
+	border: none;
+	background: none;
+	position: absolute;
+	right: 2em;
+	top: 1.6em;
+	order: 2;
+}
+
+
+
+
+
+
+
+
+
+
+/**********/
+/* SECTION 1 */
+/**********/
+
+/* section {
+	background-image: url(../images/duurzaam.jpg);
+	background-size: cover;
+
+} */
+
+
+
+
+
+/**********/
+/* SECTION 2 */
+/**********/
+
+section {
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+}
+
+section > section {
+	display: flex;
+	flex-direction: row;
+	margin: auto .5em;
+}
+
+section article {
+	display: flex;
+	flex-direction: column;
+	scroll-snap-align: start;
+}
+
+section article h3 {
+	text-align: center;
+	position: relative;
+}
+
+article img {
+	margin: auto .5em;
+	position: relative;
+	order: -1;
+}
+
+
+
+
