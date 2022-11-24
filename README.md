@@ -117,18 +117,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Stand van zaken
   Flexbox en order ging goed. Ook scrollen binnen containers, custom forms etc.
   <img src="./readme-images/menuv1.png" alt="Screenshot van de header">
+  <img src="./readme-images/codecategorie.png" alt="Screenshot van de code van de categorie sectie">
   <img src="./readme-images/categoriev1.png" alt="Screenshot van de sectie 'Kies een categorie'">
 
 
   ### Agenda voor meeting
 
-  | Brianne                        | student 2                | student 3                | student 4                |
+  | Brianne                        | Taurese                  | Lars H.                  | student 4                |
   | ---                            | ---                      | ---                      | ---                      |
-  | Ik kan niet altijd :nth-of-    | ...                      | ...                      | ...                      |
-  | child gebruiken. Bijv. als ik  | ...                      | ...                      | ...                      |
-  | de 1e section een background-  | ...                      | ...                      | ...                      |
-  | image wil geven. Wat moet ik   | ...                      | ...                      | ...                      |
-  | dan doen? (zelfde met links)   | ...                      | ...                      | ...                      |        
+  | Ik kan niet altijd :nth-of-    | Wil een li veranderen    | Wat is de beste start    | ...                      |
+  | child gebruiken. Bijv. als ik  | dmv een timer            | voor het css'en?         | ...                      |
+  | de 1e section een background-  |                          |                          | ...                      |
+  | image wil geven. Wat moet ik   |                          |                          | ...                      |
+  | dan doen? (zelfde met links)   |                          |                          | ...                      |        
 
 
   ### Verslag van meeting
