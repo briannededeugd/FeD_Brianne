@@ -162,18 +162,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Brianne             | Student 2        | Student 3        |
-  | Ik loop nu tegen    |                  |                  |
-  | kleine dingen aan,  |                  |                  |
-  | zoals de ruimte     |                  |                  |
-  | onder mijn header+  |                  |                  |
-  | de alignment van de |                  |                  |
-  | 'ontdek meer' knop. |                  |                  |
-  | Daarnaast weet ik   |                  |                  |
-  | niet waar ik moet   |                  |                  |
-  | beginnen met de     |                  |                  |
-  | toggle van het      |                  |                  |
-  | onderste menu.      |                  |                  |
+  Brianne:
+  Ik loop nu tegen kleine dingen aan, zoals de ruimte onder mijn header+ de alignment van de 'ontdek meer' knop. Daarnaast weet ik niet waar ik moet beginnen met de toggle van het onderste menu.
 
 
   ### Verslag van meeting
