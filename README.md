@@ -44,7 +44,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de tweede pagina (small screen):
   BOL.COM - elektronica  
-  <img src="readme-images/bolcategorie.jpeg" width="375px" alt="de elektronica-pagina van bol.com, zonder filters">
+  <img src="readme-images/bolboek.jpeg" width="375px" alt="een boekpagina van bol.com, zonder filters">
  
 </details>
 
@@ -135,10 +135,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Het is gelukt om meer met specifiekere selectoren te doen, zoals :first-of-type en '>' om directe kinderen te selecteren.
 
 </details>
 
@@ -148,21 +145,35 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Voortgang 2 (week 3)
 
-<details>
+<details open>
   <summary>uitwerken voor 2e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik ben heel blij met hoe mijn hamburger-menu is geworden:
+  <img src="./readme-images/hamburgermenu.png" alt="Hamburger menu screenshot">
+  En ik ben ook trots op mijn footer:
+  <img src="./readme-images/footer.png" alt="Footer screenshot">
+  Ik vind dat de spacing hier echt goed is gelukt en dat het er netjes uitziet! Ook ben ik denk ik goed bezig geweest met nieuwe dingen
+  zoals ":not(:first-of-type):"
+  <img src="./readme-images/codeselector.png" alt="Code van CSS screenshot">
+
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Brianne             | Student 2        | Student 3        |
+  | Ik loop nu tegen    |                  |                  |
+  | kleine dingen aan,  |                  |                  |
+  | zoals de ruimte     |                  |                  |
+  | onder mijn header+  |                  |                  |
+  | de alignment van de |                  |                  |
+  | 'ontdek meer' knop. |                  |                  |
+  | Daarnaast weet ik   |                  |                  |
+  | niet waar ik moet   |                  |                  |
+  | beginnen met de     |                  |                  |
+  | toggle van het      |                  |                  |
+  | onderste menu.      |                  |                  |
 
 
   ### Verslag van meeting

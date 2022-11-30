@@ -1,16 +1,13 @@
 // JavaScript Document
 console.log("hi");
 
-// let height = window.innerHeight;
-// document.getElementById("menu").style.height = height + "px";
+let deMenuKnop = document.querySelector("header button:first-of-type");
+let deSluitKnop = document.querySelector("header nav:first-of-type button");
 
-// function menuUitvouwen() {
-//     var menu = document.getElementById("hamburgermenu");
-//     if (menu.style.display === "block") {
-//         menu.style.display = "none";
-//     } else {
-//         menu.style.display = "block";
-//     }
-// }
+deMenuKnop.addEventListener("click", toggleMenu);
+deSluitKnop.addEventListener("click", toggleMenu);
 
-// document.getElementById("menuToggle").addEventListener("click", menuUitvouwen);
+function toggleMenu() {
+    let deNav = document.querySelector("header nav:first-of-type");
+    deNav.classList.toggle("open");
+  }
