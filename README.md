@@ -165,6 +165,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Brianne:
   Ik loop nu tegen kleine dingen aan, zoals de ruimte onder mijn header+ de alignment van de 'ontdek meer' knop. Daarnaast weet ik niet waar ik moet beginnen met de toggle van het onderste menu.
 
+  Taurese:
+  Wil weten hoe je een dropdown in een footer plaatst.
+
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
