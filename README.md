@@ -150,12 +150,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   Ik ben heel blij met hoe mijn hamburger-menu is geworden:
-  <img src="./readme-images/hamburgermenu.png" alt="Hamburger menu screenshot" width="375px">
+  <img src="./readme-images/hamburgermenu.png" width="375px" alt="Hamburger menu screenshot">
   En ik ben ook trots op mijn footer:
-  <img src="./readme-images/footer.png" alt="Footer screenshot" width="375px">
+  <img src="./readme-images/footer.png" width="375px" alt="Footer screenshot">
   Ik vind dat de spacing hier echt goed is gelukt en dat het er netjes uitziet! Ook ben ik denk ik goed bezig geweest met nieuwe dingen
   zoals ":not(:first-of-type):"
-  <img src="./readme-images/codeselector.png" alt="Code van CSS screenshot" width="375px">
+  <img src="./readme-images/codeselector.png" width="375px" alt="Code van CSS screenshot">
 
 
 
