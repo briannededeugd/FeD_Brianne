@@ -26,6 +26,11 @@ summary {
 	--color-achtergronden: #0300a4;
 	--color-links: #0800ff;
 	--color-borders: #e6e6e8;
+	--color-vlakken: #f0f6ff;
+	--color-prijs: red;
+	--color-voordeel: #0c7000;
+	--color-kopen-en-reviews: #febd00;
+	--uitklaptijd: .3s;
 }
 
 /* Regular font */
@@ -44,6 +49,11 @@ summary {
 @font-face {
 	font-family: Kameron;
 	src: url("../fonts/Kameron-Regular.ttf");
+}
+
+@font-face {
+	font-family: Ultra;
+	src: url("../fonts/Ultra-Regular.ttf");
 }
 
 
@@ -80,6 +90,10 @@ h1,
 h2 {
 	font-family: Graphik-Bold, Arial, Helvetica, sans-serif;
 	padding: 0 .8em;
+}
+
+h1 {
+	margin: 0;
 }
 
 main section:not(:first-of-type) h2 {
@@ -120,7 +134,7 @@ header {
 }
 
 /* menu button */
-header > button {
+header>section>button {
 	margin: auto;
 	/* zo weghalen */
 	border: none;
@@ -130,7 +144,7 @@ header > button {
 	background-color: var(--color-whitespace);
 }
 
-header > button span {
+header>section>button span {
 	display: block;
 	width: 23px;
 	height: 2px;
@@ -219,6 +233,28 @@ header li a {
 	margin: .5em;
 }
 
+
+header>section {
+	display: grid;
+	grid-template-columns: 1fr 3fr 2fr;
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	width: 100%;
+}
+
+header > section > nav:first-of-type {
+	grid-area: 1 / 1 / 2 / 2;
+}
+
+header > section > a {
+	grid-area: 1 / 2 / 2 / 3;
+}
+
+header > section > nav:nth-of-type(2) {
+	grid-area: 1 / 3 / 2 / 4;
+}
+
 /* zoeken */
 header form {
 	display: flex;
@@ -258,143 +294,34 @@ form button {
 
 
 
-
-/**********/
-/* SECTION 2 */
-/**********/
-
-section {
-	overflow: auto;
-	scroll-snap-type: x mandatory;
-}
-
-section > section {
-	display: flex;
-	flex-direction: row;
-	margin: auto .5em;
-}
-
-section article {
-	display: flex;
-	flex-direction: column;
-	scroll-snap-align: start;
-}
-
-section article h3 {
-	text-align: center;
-	position: relative;
-}
-
-article img {
-	margin: auto .5em;
-	position: relative;
-	order: -1;
-}
-
-main > section:first-of-type {
-	position: relative;
-	display: grid;
-	width: 100vw;
-	height: 25vh;
-	background-image: url("../images/duurzaam.jpg");
-	background-size: cover;
-	background-position: center center;
-	margin-top: 0;
-	/* background-attachment: fixed; */
-}
-
-main>section:first-of-type button {
-	position: absolute;
-	bottom: 1em;
-	left: 1em;
-	width: 2.5em;
-	height: 2.5em;
-	border: none;
-	background-color: var(--color-achtergronden);
-	color: var(--color-whitespace);
-}
-
-main>section>section a,
-main>section:first-of-type a {
-	color: var(--color-text);
-}
-
-
-
-/* derde section: shop de look */
-main > section:nth-of-type(3) {
-	margin: 1em 0;
-}
-
-main > section:nth-of-type(3) > section:first-child {
-	display: flex;
-	align-content: center;
-	justify-content: space-between;
-}
-
-main > section:nth-of-type(3) > section:first-child > a {
-	color: var(--color-links);
-	margin-bottom: 0;
-	padding-bottom: 0;
-}
-
-
-/* vierde section: ontdekken */
-main > section:nth-of-type(4) > nav ul {
-	list-style-type: none;
-	padding-left: 1.5em;
-	padding-right: 1.5em;
-}
-
-main > section:nth-of-type(4) > nav ul li:not(:last-child) {
-	border-bottom: var(--color-borders) 1px solid;
-}
-
-main > section:nth-of-type(4) > nav ul li {
-	padding: 1em 0;
-}
-
-main > section:nth-of-type(4) > nav ul li button {
-	font-family: Graphik, Arial, Helvetica, sans-serif;
-	font-size: 1em;
-	border: none;
-	background-color: var(--color-whitespace);
-
-}
-
-
-
-
-
-
 /***************************/
 /********** FOOTER *********/
 /***************************/
 
 /* eerste sectie met de blauwe achtergrond */
-footer > section:first-of-type {
+footer>section:first-of-type {
 	padding: 1em;
 	font-size: 0.8em;
 	background-color: var(--color-achtergronden);
 }
 
-footer > section:first-of-type h2,
-footer > section:first-of-type a {
+footer>section:first-of-type h2,
+footer>section:first-of-type a {
 	color: var(--color-whitespace);
 	padding: 0 0 1em;
 }
 
-footer > section:first-of-type h2 {
+footer>section:first-of-type h2 {
 	font-size: 1.3em !important;
 	margin-bottom: 0;
 }
 
-footer > section:first-of-type > p:first-of-type {
+footer>section:first-of-type>p:first-of-type {
 	margin-bottom: 0;
 	padding-bottom: 0 !important;
 }
 
-footer > section:first-of-type article {
+footer>section:first-of-type article {
 	display: flex;
 	flex-direction: row;
 }
@@ -424,30 +351,35 @@ footer ul a {
 }
 
 /* tweede sectie: wil je ons volgen? */
-footer > section:nth-of-type(2) {
+footer>section:first-of-type {
+	margin: 1em auto;
+}
+
+footer>section:nth-of-type(2) {
 	border-bottom: var(--color-borders) 1px solid;
 	padding-bottom: 1em;
 }
 
-footer > section:nth-of-type(2) p {
+footer>section:nth-of-type(2) p {
 	text-align: center;
 }
 
-footer > section:nth-of-type(2) p:first-of-type {
+footer>section:nth-of-type(2) p:first-of-type {
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 800;
 	text-align: center;
 	margin: 2em;
 }
 
-footer > section:nth-of-type(2) section {
+footer>section:nth-of-type(2) section {
+	display: flex;
 	margin: 1.5em 5em;
 	justify-content: space-between;
 	align-items: center;
 }
 
 /* bol logo helemaal onderaan */
-footer > img {
+footer>img {
 	display: block;
 	margin: 2em auto;
 }

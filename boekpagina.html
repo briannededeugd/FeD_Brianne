@@ -8,6 +8,7 @@
 
 	<title>De winkel van ons allemaal</title>
 
+	<link href="styles/style.css" rel="stylesheet">
 	<link href="styles/boekstyle.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
@@ -15,108 +16,157 @@
 <body>
 
 	<header>
-		<a href="#"><img src="./images/bol-logo.png" alt="Het logo van Bol.com, donkerblauw op witte achtergrond"></a>
+		<section>
+			<a href="#"><img src="./images/bol-logo.png"
+					alt="Het logo van Bol.com, donkerblauw op witte achtergrond"></a>
 
-		<button>
-			<span></span>
-			<span></span>
-			<span></span>
-		</button>
-
-		<nav>
-			<button>
-				<img src="./images/sluitknop.png" alt="Sluitknop icoon">
+			<button aria-label="Hamburgermenu hoofdmenu openen">
+				<span></span>
+				<span></span>
+				<span></span>
 			</button>
-			<ul>
-				<li>
-					<a href="#">
-						<h2>Boeken</h2>
-						<img src="./images/menu-boeken.png" alt="Vrouw die een boek leest">
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<h2>Muziek, Film & Games</h2>
-						<img src="./images/menu-films.JPG" alt="Een stopcontact">
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<h2>Computer & Elektronica</h2>
-						<img src="./images/menu-elektronica.png" alt="Een stopcontact">
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<h2>Speelgoed, Hobby & Feest</h2>
-						<img src="./images/menu-speelgoed.png" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<h2>Zwanger, Baby & Peuter</h2>
-						<img src="./images/menu-baby.png" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<h2>Mooi & Gezond</h2>
-						<img src="./images/menu-beauty.png" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<h2>Kleding, Schoenen & Accessoires</h2>
-						<img src="./images/menu-kleding.jpg" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<h2>Sport, Outdoor & Reizen</h2>
-						<img src="./images/menu-sport.png" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<h2>Kantoor & School</h2>
-						<img src="./images/menu-kantoor.jpg" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<h2>Eten & Drinken</h2>
-						<img src="./images/menu-eten.jpg" alt="">
-					</a>
-				</li>
-			</ul>
-		</nav>
+
+			<nav>
+				<button aria-label="Hamburgermenu hoofdmenu sluiten">
+					<img src="./images/sluitknop.png" alt="Sluitknop icoon">
+				</button>
+				<ul>
+					<li>
+						<a href="#">
+							<!-- van de h2's p's maken -->
+							<h2>Boeken</h2>
+							<img src="./images/menu-boeken.png" alt="Vrouw die een boek leest">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>Muziek, Film & Games</h2>
+							<img src="./images/menu-films.JPG" alt="Een stopcontact">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>Computer & Elektronica</h2>
+							<img src="./images/menu-elektronica.png" alt="Een stopcontact">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>Speelgoed, Hobby & Feest</h2>
+							<img src="./images/menu-speelgoed.png" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>Zwanger, Baby & Peuter</h2>
+							<img src="./images/menu-baby.png" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>Mooi & Gezond</h2>
+							<img src="./images/menu-beauty.png" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>Kleding, Schoenen & Accessoires</h2>
+							<img src="./images/menu-kleding.jpg" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>Sport, Outdoor & Reizen</h2>
+							<img src="./images/menu-sport.png" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>Kantoor & School</h2>
+							<img src="./images/menu-kantoor.jpg" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<h2>Eten & Drinken</h2>
+							<img src="./images/menu-eten.jpg" alt="">
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<nav>
+				<ul>
+					<li><a href="#">
+							<img src="./images/profiel.PNG" alt="Knop naar profielpagina"></a>
+					</li>
+	
+					<li><a href="#">
+							<img src="./images/wenslijst.PNG" alt="Knop naar wenslijst"></a>
+					</li>
+	
+					<li><a href="#">
+							<img src="./images/winkelwagen.PNG" alt="Knop naar winkelwagen"></a>
+					</li>
+				</ul>
+			</nav>
+		</section>
 
 		<form>
 			<input type="text" placeholder="Waar ben je naar op zoek?">
-			<button>
+			<button aria-label="Zoekopdracht verwerken">
 				<img src="./images/zoeken.PNG" alt="Zoekknop">
 			</button>
 		</form>
-
-		<nav>
-			<ul>
-				<li><a href="#">
-						<img src="./images/profiel.PNG" alt="Knop naar profielpagina"></a>
-				</li>
-
-				<li><a href="#">
-						<img src="./images/wenslijst.PNG" alt="Knop naar wenslijst"></a>
-				</li>
-
-				<li><a href="#">
-						<img src="./images/winkelwagen.PNG" alt="Knop naar winkelwagen"></a>
-				</li>
-			</ul>
-		</nav>
 	</header>
 
 	<main>
-		<h1><span class="verbergtext">Text weg</span></h1>
+
+		<!-- Titel en zo -->
+		<section>
+			<a href="./index.html">Literatuur & Romans</a>
+
+			<h1>Seven Husbands of Evelyn Hugo</h1>
+			<h2>The Sunday Times Bestseller</h2>
+
+			<p>Auteur: <a href="#">Taylor Jenkins Reid</a> | Taal: Engels | ★★★★★ <a href="#">4,5/5 (11 reviews)</a> | <a href="#">Delen</a></p>
+		</section>
+
+		<!-- Boek image -->
+		<section>
+			<p>Bestseller</p>
+			<img src="./images/voegtoe-unselected.png" alt="Favorietenknop" id="favoriet">
+		</section>
+
+		<section>
+			<p><em>Bindwijze:</em> Paperback</p>
+			<p>10,<sup>09</sup></p>
+
+			<p>Op voorraad</p>
+			<p>Voor 23:59 uur besteld, morgen in huis</p>
+			<p>Verkoop door bol.com</p>
+
+			<button aria-label="Knop om toe te voegen aan winkelwagen">
+				In winkelwagen
+			</button>
+
+			<ul>
+				<li>Gratis verzending door bol.com vanaf 20 euro</li>
+				<li>Ophalen bij een afhaalpunt mogelijk</li>
+				<li>30 dagen bedenktijd en gratis retourneren</li>
+				<li>Dag en nacht klantenservice</li>
+			</ul>
+
+			<h3>Bezorgopties</h3>
+			<ul>
+				<li>Vandaag nog in huis (bestel ma-vr voor 12:00, bezorging tussen 17:00 en 22:00</li>
+				<li>Doordeweeks ook 's avonds in huis</li>
+				<li>Ook zondag in huis (bestel voor za 23:59)</li>
+				<li>Vandaag nog bij afhaalpunt (bestel voor 12:00, ophalen vanaf 17:00)</li>
+			</ul>
+
+			<a href="#">Bekijk alle bezorgopties</a>
+		</section>
 
         
     </main>

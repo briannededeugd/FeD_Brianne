@@ -1,0 +1,185 @@
+/***************************************/
+/*************** SECTIONS **************/
+/***************************************/
+
+section {
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+}
+
+section > section {
+	display: flex;
+	flex-direction: row;
+	margin: auto .5em;
+}
+
+section article {
+	display: flex;
+	flex-direction: column;
+	scroll-snap-align: start;
+}
+
+section article h3 {
+	text-align: center;
+	position: relative;
+}
+
+article img {
+	margin: auto .5em;
+	position: relative;
+	order: -1;
+}
+
+
+/* Eerste section: duurzaam */
+main > section:first-of-type {
+	position: relative;
+	display: grid;
+	width: 100vw;
+	height: 25vh;
+	background-image: url("../images/duurzaam.jpg");
+	background-size: cover;
+	background-position: center center;
+	margin-top: 0;
+}
+
+main>section:first-of-type button {
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	width: 2.5em;
+	height: 2.5em;
+	border: none;
+	background-color: var(--color-achtergronden);
+	color: var(--color-whitespace);
+}
+
+main>section>section a,
+main>section:first-of-type a {
+	color: var(--color-text);
+}
+
+
+
+/* derde section: shop de look */
+main > section:nth-of-type(3) {
+	margin: 1em 0;
+}
+
+main > section:nth-of-type(3) > section:first-child {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+main > section:nth-of-type(3) > section:first-child > a {
+	display: flex;
+	align-items: center;
+	color: var(--color-links);
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+main > section:nth-of-type(3) > section:first-child > a img {
+	margin-left: .5em;
+}
+
+
+/* vierde section: ontdekken */
+main > section:nth-of-type(4) > section {
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto 1em;
+	align-items: self-start;
+}
+ 
+main > section:nth-of-type(4) > section:not(:last-child) h3 {
+	border-bottom: var(--color-borders) 1px solid;
+}
+
+main > section:nth-of-type(4) h3 {
+	padding: 1em 0;
+	flex-grow: 1;
+	font-size: 1em;
+	margin: .25em;
+}
+
+main > section:nth-of-type(4) > section > button {
+	width: 3em;
+	aspect-ratio: 1/1;
+	padding: 0;
+	border: none;
+	background-color: var(--color-whitespace);
+	font-family: Graphik, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+}
+
+main > section:nth-of-type(4) > section > button img {
+	transform: rotate(.25turn);
+	transition: var(--uitklaptijd);
+}
+
+main > section:nth-of-type(4) > section.open > button img {
+	transform: rotate(-.25turn);
+	transition: var(--uitklaptijd);
+}
+
+main > section:nth-of-type(4) > section ul {
+	list-style-type: none;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	width: 100%;
+	margin: 0;
+	transition: var(--uitklaptijd);
+	
+	max-height: 0em;
+	overflow: hidden;
+}
+
+main > section:nth-of-type(4) > section.open ul {
+	max-height: 25em;
+	transition: var(--uitklaptijd);
+	margin: auto;
+}
+
+main > section:nth-of-type(4) > section li:not(:last-of-type) {
+	border-bottom: var(--color-borders) 1px solid;
+}
+
+main > section:nth-of-type(4) > section ul li a {
+	display: block;
+	padding: 1em;
+}
+
+@media (min-width: 32em) {
+	main > section:nth-of-type(4) > section > button img {
+		order: -100;
+	}
+}
+
+@media (min-width: 50em) {
+	main > section:nth-of-type(4) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		gap: .5em;
+	}
+
+	main > section:nth-of-type(4) > h2 {
+		width: 100%;
+		flex: 0 0 100%;
+	}
+
+	main > section:nth-of-type(4) > section h3 {
+		cursor: unset;
+	}
+
+	main > section:nth-of-type(4) button {
+		display: none;
+	}
+
+	main section:nth-of-type(4) > section ul,
+	main section:nth-of-type(4) > section.open ul {
+		max-height:unset;
+	}
+}

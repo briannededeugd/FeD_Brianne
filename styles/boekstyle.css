@@ -1,341 +1,128 @@
-/**************/
-/* CSS REMEDY */
-/**************/
-*,
-*::after,
-*::before {
-	box-sizing: border-box;
+main {
+	margin: auto 1.5em;
 }
 
-button,
-summary {
-	cursor: pointer;
-}
-
-
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-	/* startje */
-	--color-text: #111;
-	--color-whitespace: #fff;
-	--color-achtergronden: #0300a4;
-	--color-links: #0800ff;
-	--color-borders: #e6e6e8;
-}
-
-/* Regular font */
-@font-face {
-	font-family: Graphik;
-	src: url("../fonts/GraphikRegular.otf");
-}
-
-/* Bold font */
-@font-face {
-	font-family: Graphik-Bold;
-	src: url("../fonts/GraphikBold.otf");
-}
-
-/* Light font */
-@font-face {
-	font-family: Kameron;
-	src: url("../fonts/Kameron-Regular.ttf");
-}
-
-
-
-
-
-
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
-
-/* jouw code */
-
-.verbergtext {
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
-}
-
-body {
-	font-family: Graphik, Arial, Helvetica, sans-serif;
-	margin: 0;
-	/* overflow: hidden; */
-	color: var(--color-text);
-}
-
-h1,
-h2 {
-	font-family: Graphik-Bold, Arial, Helvetica, sans-serif;
-	padding: 0 .8em;
-}
-
-main section:not(:first-of-type) h2 {
-	font-size: 1.2em;
-}
-
-a {
-	color: var(--color-links);
-	text-decoration: none;
-	cursor: pointer;
-}
-
-span {
-	font-family: Kameron, Georgia, 'Times New Roman', Times, serif;
-}
-
-strong {
-	font-family: Graphik-Bold;
-}
-
-
-
-
-
-
-
-/**********/
-/* HEADER */
-/**********/
-
-header {
-	color: var(--color-achtergronden);
-	/* width: 100%; */
-	/* margin: 0; */
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-}
-
-/* menu button */
-header > button {
-	margin: auto;
-	/* zo weghalen */
-	border: none;
-	display: flex;
-	flex-direction: column;
-	order: -100;
-	background-color: var(--color-whitespace);
-}
-
-header > button span {
-	display: block;
-	width: 23px;
-	height: 2px;
-	margin-bottom: 5px;
-	position: relative;
-
-	background: var(--color-achtergronden);
-	border-radius: 3px;
-}
-
-/* het uitschuifemenu */
-header nav:first-of-type {
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	order: 1000;
-	overflow: auto;
-
-	background-color: var(--color-whitespace);
-	transition: .5s;
-
-	transform: translateX(-100%);
-	z-index: 5;
-}
-
-nav:first-of-type.open {
-	transform: translateX(0);
-}
-
-header nav:first-of-type button {
-	background-color: var(--color-whitespace);
-	position: absolute;
-	left: 1.5em;
-	top: 1.6em;
-	border: none;
-	color: var(--color-links);
-}
-
-header nav:first-of-type ul {
-	position: absolute;
-	width: 100%;
-	top: 3.5em;
-	left: .5em;
-	padding-right: 1em;
-}
-
-header nav:first-of-type ul h2 {
-	font-family: Graphik;
-	font-size: 1em;
-	padding-left: 1em;
-	order: 1000;
-}
-
-header nav:first-of-type a {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-header nav:first-of-type li {
-	border-top: var(--color-borders) solid 1px;
-	padding: .25em;
-	margin-top: 0;
-}
-
-/* tweede menu met iconen */
-header nav:nth-of-type(2) li {
-	display: inline;
-	margin: auto;
-}
-
-header ul {
-	list-style-type: none;
+h1, h2 {
 	padding: 0;
 }
 
-header ul a {
-	text-decoration: none;
-	color: var(--color-text);
+em {
+	font-family: Graphik-Bold, Arial, Helvetica, sans-serif !important;
+	font-style: normal;
 }
 
-header li a {
-	display: inline;
-	margin: .5em;
+sup {
+	vertical-align: text-top;
 }
 
-/* zoeken */
-header form {
-	display: flex;
+/***************************/
+/********** MAIN ***********/
+/***************************/
+
+/* Eerste section: basis-informatie en terugknop */
+main > section:first-of-type {
+	margin: 1.5em auto;
+}
+
+main > section:first-of-type h1 {
+	margin-top: 1em;
+	margin-bottom: .5em;
+}
+
+main > section:first-of-type h2 {
+	font-family: Graphik, Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	margin-top: 0;
+}
+
+main > section:first-of-type p {
+	margin-top: 2em;
+}
+
+main > section:first-of-type > a:first-of-type {
+	align-content: center;
+}
+
+main > section:first-of-type > a:first-of-type::before {
+	display: inline-block;
+	content: url("../images/toggle.png");
+	transform: rotate(180deg);
+	margin-right: .5em;
+}
+
+main > section:first-of-type > a:first-of-type:hover {
+	text-decoration: underline;
+}
+
+
+/* Tweede section: de foto */
+main > section:nth-of-type(2) {
+	background-image: url("../images/sevenhusbands.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	aspect-ratio: 2 / 2;
+	height: 100%;
 	position: relative;
-	width: 100%;
-	flex-shrink: 0;
-	order: 100;
-	margin-bottom: 0;
-	background-color: var(--color-achtergronden);
 }
 
-input[type="text"] {
-	width: 100%;
-	border: none;
-	border-radius: 20em;
-	padding: 1.3em 2em;
-	margin: 1em;
-}
-
-input[placeholder] {
-	color: var(--color-text);
-}
-
-form button {
-	border: none;
-	background: none;
+main > section:nth-of-type(2) p {
+	background-color: var(--color-vlakken);
 	position: absolute;
-	right: 1em;
-	top: 1.6em;
-	order: 2;
+	border: var(--color-borders) 1px solid;
+	padding: 1em 2em;
+	top: 0;
+	margin: 0; 
+}
+
+main > section:nth-of-type(2) img {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* Derde section: bindwijze tm bezorgopties */
+main > section:nth-of-type(3) p:nth-of-type(2) {
+	font-family: Ultra, 'Times New Roman', Times, serif;
+	color: var(--color-prijs);
+	font-size: 2em;
+	margin: 0; 
+}
+
+main > section:nth-of-type(3) p:nth-of-type(3),
+main > section:nth-of-type(3) p:nth-of-type(4) {
+	color: var(--color-voordeel);
+}
+
+main > section:nth-of-type(3) p:nth-of-type(3) {
+	display: inline;
+	padding: .25em;
+	margin-top: 2em;
+	font-family: Graphik-Bold, Arial, Helvetica, sans-serif;
+	border: var(--color-voordeel) 1px solid;
+}
+
+main > section:nth-of-type(3) ul {
+	list-style-image: url(../images/);
 }
 
 
 
-
-
-/***************************/
-/********** FOOTER *********/
-/***************************/
-
-/* eerste sectie met de blauwe achtergrond */
-footer > section:first-of-type {
-	padding: 1em;
-	font-size: 0.8em;
-	background-color: var(--color-achtergronden);
-}
-
-footer > section:first-of-type h2,
-footer > section:first-of-type a {
-	color: var(--color-whitespace);
-	padding: 0 0 1em;
-}
-
-footer > section:first-of-type h2 {
-	font-size: 1.3em !important;
-	margin-bottom: 0;
-}
-
-footer > section:first-of-type > p:first-of-type {
-	margin-bottom: 0;
-	padding-bottom: 0 !important;
-}
-
-footer > section:first-of-type article {
-	display: flex;
-	flex-direction: row;
-}
-
-/* tweede sectie: de lijst van links */
-footer ul {
-	list-style-type: none;
-	display: flex;
-	flex-wrap: wrap;
-	padding: 0 .5em;
-	margin: auto;
-	align-items: center;
-	justify-content: center;
-}
-
-footer ul li {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	border-bottom: var(--color-borders) solid 1px;
-	padding: 1em;
-}
-
-footer ul a {
-	color: var(--color-text);
-}
-
-/* tweede sectie: wil je ons volgen? */
-footer > section:nth-of-type(2) {
-	border-bottom: var(--color-borders) 1px solid;
-	padding-bottom: 1em;
-}
-
-footer > section:nth-of-type(2) p {
-	text-align: center;
-}
-
-footer > section:nth-of-type(2) p:first-of-type {
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 800;
-	text-align: center;
-	margin: 2em;
-}
-
-footer > section:nth-of-type(2) section {
-	margin: 1.5em 5em;
-	justify-content: space-between;
-	align-items: center;
-}
-
-/* bol logo helemaal onderaan */
-footer > img {
+main > section:nth-of-type(3) button {
 	display: block;
-	margin: 2em auto;
+	font-family: Graphik, Arial, Helvetica, sans-serif;
+	background-color: var(--color-kopen-en-reviews);
+	border: none;
+	padding: .75em;
+	width: 80%;
+	margin: auto;
+	font-size: 1em;
+	box-shadow: 0 4px 0-2px rgba(3,3,26,.25);;
 }
+
+main > section:nth-of-type(3) button::before {
+	content: url("../images/voegtoe-winkelwagen.png");
+	margin-right: .5em;
+	vertical-align: middle;
+}
+
