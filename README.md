@@ -172,10 +172,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - De ruimte is gefixt! Ik kan ook de methode van de toggles en de responsiveness ervan verwerken voor mijn navbar en de footer.
 
 </details>
 
@@ -192,9 +189,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
   #### Screenreader
-  Je website gaat hierarchies van onder naar boven met de reader. Eerst het logo, dan hamburger menu, de Items in het hamburger menu, de header links (de logo’tjes), zoekbalk input, zoek logo dingetje om je zoekopdracht te zoeken. Kies een categorie (kop niveau twee zegt hij) hij leest dat niet voor (kies een categorie/ shop de look, ontdek alles bij bol). Alt bij afbeeldingen missen niet dat gaat goed. Ontdek alle looks (wat betekent dat Bri?), Bij ontdek alles bij bol: alle kopjes zoals boek / muziek film games. Service & contact leest hij niet voor, meld je aan leest hij als enige voor.
+  Je website gaat hierarchies van onder naar boven met de reader. Eerst het logo, dan hamburger menu, de Items in het hamburger menu, de header links (de logo’tjes), zoekbalk input, zoek logo dingetje om je zoekopdracht te zoeken. Kies een categorie (kop niveau twee zegt hij) hij leest dat niet voor (kies een categorie/ shop de look, ontdek alles bij bol). Alt bij afbeeldingen missen niet dat gaat goed. Ontdek alle looks, Bij ontdek alles bij bol: alle kopjes zoals boek / muziek film games. Service & contact leest hij niet voor, meld je aan leest hij als enige voor.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Met de screenreader gaat alles goed, ik moet alleen kijken waarom hij 'Service & Contact' niet voorleest.
 
 
   #### Muis en Toetsenbord 
@@ -216,19 +213,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Kleuren testen - pagina 2: Blue Cone Monochromacy / Achromatomaly (De gele knop heeft minder contrast). Bij Monochromacy / Achromatopsia (Hierbij is het contrast werkelijk minder, hier zou je naar kunnen kijken, niet per se nodig. Blue-Blind / Tritanopia (Hierbij lijkt het blauw allemaal een beetje hetzelfde).
 
 
-  Wat ik hiermee ga doen:
+  Wat ik hiermee ga doen: Dark mode toevoegen.
 
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Parkison: Wat naar om Parkinson te hebben, de site bedienen gaat wel goed. 
+  Concentratie: De website bedienen als je niet geconcentreerd bent gaat goed, sommige iconen kunnen een beetje groter.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Ik kan iconen iets groter maken.
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Visuele beperking voor beide pagina’s: Combined Loss Diabetic Eye Disease, Hemifield Loss (Alles kan ik goed zien), Peripheral Field Loss (Je ziet niks, komt niet door de site), Central field loss (Dingen met zwart zijn lastiger te zien),  Color Yellow (Je ziet geen contrast, dat is gek). 
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Ik kan kijken of iconen iets groter te maken zijn en bij de verschillende states misschien animaties toevoegen zodat deze niet alleen afhankelijk zijn van kleur.,
 
 </details>
 
