@@ -249,7 +249,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Brianne: ik wil graag weten hoe ik iconen (images) verander als de grootte van mijn scherm verandert met JavaScript en Css, en of het semantisch correct is om meerdere p’s onder elkaar te hebben of dat daar een andere mogelijkheid voor is. Als laatste wil ik mijn foto’s en tekstgroottes responsive maken.
 
-  Taurese: Ik weet niet hoe ik de header die we in de les hebben gemaakt er goed uit kan laten zien op de desktop versie. En dat mijn navigatie voor een of andere reden niet opent op mijn tweede pagina desondanks de code precies hetzelfde is (css & javascript)
+  Taurese: Ik weet niet hoe ik de header die we in de les hebben gemaakt er goed uit kan laten zien op de desktop versie. En dat mijn navigatie voor een of andere reden niet opent op mijn tweede pagina desondanks de code precies hetzelfde is (css & javascript).
+
+  Lars: Ik wil graag weten hoe ik het best de icons uit de site krijg. Verder wil ik weten hoe je mijn menue omzet naar een dropdown. Ook wil ik een beetje info over hoe ik mijn site kan laten verspringen naar 2/3 rows op desktop.
 
 
   ### Verslag van meeting
