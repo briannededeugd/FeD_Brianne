@@ -159,15 +159,19 @@ main > section:nth-of-type(4) > section ul li a {
 
 @media (min-width: 50em) {
 	main > section:nth-of-type(4) {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
 		gap: .5em;
 	}
 
 	main > section:nth-of-type(4) > h2 {
-		width: 100%;
-		flex: 0 0 100%;
+		grid-column:1 / -1;
+	}
+
+	main > section:nth-of-type(4) section {
+		align-self: start;
+		margin:0 1em;
 	}
 
 	main > section:nth-of-type(4) > section h3 {
@@ -181,5 +185,15 @@ main > section:nth-of-type(4) > section ul li a {
 	main section:nth-of-type(4) > section ul,
 	main section:nth-of-type(4) > section.open ul {
 		max-height:unset;
+	}
+
+	main > section:nth-of-type(4) > section:nth-of-type(4) h3{
+		border-bottom: 1px solid var(--color-borders);
+	}
+}
+
+@media (min-width: 72em) {
+	main > section:nth-of-type(4) {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 }

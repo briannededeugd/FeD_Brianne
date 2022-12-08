@@ -185,22 +185,38 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Toegankelijkheidstest 2/2 (week 4)
 
-<details>
+<details open>
   <summary>uitwerken na test in 8e werkgroep</summary>
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Je website gaat hierarchies van onder naar boven met de reader. Eerst het logo, dan hamburger menu, de Items in het hamburger menu, de header links (de logo’tjes), zoekbalk input, zoek logo dingetje om je zoekopdracht te zoeken. Kies een categorie (kop niveau twee zegt hij) hij leest dat niet voor (kies een categorie/ shop de look, ontdek alles bij bol). Alt bij afbeeldingen missen niet dat gaat goed. Ontdek alle looks (wat betekent dat Bri?), Bij ontdek alles bij bol: alle kopjes zoals boek / muziek film games. Service & contact leest hij niet voor, meld je aan leest hij als enige voor.
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Tabs & Muis
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Tabjes - pagina 1: In het begin is het nog niet duidelijk genoeg als je met de tabjes start. Hij begint bij je logo en dan gaat hij naar je menu. Het duurt 8 tabs voor je de andere icoontjes krijgt. De header pakt hij niet qua active state. Kies een categorie, shop de look en ontdek alles bij bol selecteert hij goed. Alles in de footer pakt hij ook met tabben. Tabben door je hamburger menu gaat gemakkelijk. 
+  Tabjes -  pagina 2: De tab pagina werkt op alle linkjes, ook de hamburger menu, zelfde verhaal als pag 1. 
+
+  Met muis  - pagina 1: 
+  Klikken op het menu gaat gemakkelijk. Alleen het sluiten, de sluitknop (het kruisje) zit niet op dezelfde hoogte. Alle linkjes op je site reageren nog niet als states, maar je ziet wel dat de curser in een handje veranderd dus dat is goed. Alleen nu nog wat verduidelijken. Verder zie ik geen states uitgewerkt, die moeten nog toegevoegd worden. 
+  Met muis - pagina 2: Zelfde verhaal als pag 1.
+
+  Dark mode & kleuren
+
+  Dark mode - pagina 1: Heeft geen dark mode, moet nog toegevoegd worden. 
+  Dark mode - pagina 2:  Heeft geen dark mode, moet nog toegevoegd worden. 
+
+  Kleuren testen - pagina 1:  Bol heeft al de juiste kleuren, misschien met states dat je daar extra op kan letten als je het kleurtje veranderd / toevoegd. 
+  Kleuren testen - pagina 2: Blue Cone Monochromacy / Achromatomaly (De gele knop heeft minder contrast). Bij Monochromacy / Achromatopsia (Hierbij is het contrast werkelijk minder, hier zou je naar kunnen kijken, niet per se nodig. Blue-Blind / Tritanopia (Hierbij lijkt het blauw allemaal een beetje hetzelfde).
+
+
+  Wat ik hiermee ga doen:
 
 
   #### Motoriek (shocks, elastiekjes)
@@ -222,21 +238,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Voortgang 3 (week 4)
 
-<details>
+<details open>
   <summary>uitwerken voor 3e voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Ik ben trots op het feit dat ik mijn nav bar responsive heb gemaakt met grid!
+  <img src="./readme-images/menuv2.png" width="375px" alt="Navbar op klein scherm screenshot">
+  <img src="./readme-images/menuv2-grootscherm.png" width="375px" alt="Navbar op groot scherm screenshot">
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Brianne: ik wil graag weten hoe ik iconen (images) verander als de grootte van mijn scherm verandert met JavaScript en Css, en of het semantisch correct is om meerdere p’s onder elkaar te hebben of dat daar een andere mogelijkheid voor is. Als laatste wil ik mijn foto’s en tekstgroottes responsive maken.
+
+  Taurese: Ik weet niet hoe ik de header die we in de les hebben gemaakt er goed uit kan laten zien op de desktop versie. En dat mijn navigatie voor een of andere reden niet opent op mijn tweede pagina desondanks de code precies hetzelfde is (css & javascript)
 
 
   ### Verslag van meeting

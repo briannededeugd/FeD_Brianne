@@ -1,35 +1,59 @@
 // JavaScript Document
 console.log("hi");
 
-// EERSTE MENU [NAV: HAMBURGERMENU]
+// HELE HEADER
+let bolLogo = document.querySelector("header > img");
 let deMenuKnop = document.querySelector("header button:first-of-type");
+let profielIcoon = document.querySelector("header > nav:nth-of-type(2) img:first-of-type");
+let wenslijstIcoon = document.querySelector("header > nav:nth-of-type(2) img:nth-of-type(2)");
+let winkelwagenIcoon = document.querySelector("header > nav:nth-of-type(2) img:nth-of-type(3)");
+
+window.addEventListener("resize", menuVeranderen);
+
+function menuVeranderen() {
+  if (screen.width >= 1200) {
+    profielIcoon.src = "./images/profiel-wit.svg";
+    wenslijstIcoon.src = "./images/wenslijst-wit.svg";
+    winkelwagenIcoon.src = "./images/winkelwagen-wit.svg";
+  } else {
+    profielIcoon.src = "./images/profiel.svg";
+    wenslijstIcoon.src = "./images/wenslijst.svg";
+    winkelwagenIcoon.src = "./images/winkelwagen.svg";
+  }
+}
+
+
+
+
+
+// EERSTE MENU [NAV: HAMBURGERMENU]
 let deSluitKnop = document.querySelector("header nav:first-of-type button");
 
 deMenuKnop.addEventListener("click", toggleMenu);
 deSluitKnop.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
-    let deNav = document.querySelector("header nav:first-of-type");
-    deNav.classList.toggle("open");
-  }
+  let deNav = document.querySelector("header nav:first-of-type");
+  deNav.classList.toggle("open");
+}
 
 // MENU BOVEN DE FOOTER
-  let deMenuButtons = document.querySelectorAll("main > section:nth-of-type(4) button");
-  let deMenuH3s = document.querySelectorAll("main > section:nth-of-type(4) > section h3");
-  
-  deMenuButtons.forEach(deMenuButton => {
-    deMenuButton.addEventListener("click", toggleOndersteMenu);
-  });
-  
-  deMenuH3s.forEach(deMenuH3 => {
-    deMenuH3.addEventListener("click", toggleOndersteMenu);
-  });
-  
-  function toggleOndersteMenu() {
-    let deButtonWaaropGekliktIs = this; 
-    let deSectionWaarDeButtonInZit = deButtonWaaropGekliktIs.closest("section");
-    deSectionWaarDeButtonInZit.classList.toggle("open");
-  }
+let deMenuButtons = document.querySelectorAll("main > section:nth-of-type(4) button");
+let deMenuH3s = document.querySelectorAll("main > section:nth-of-type(4) > section h3");
+
+deMenuButtons.forEach(deMenuButton => {
+  deMenuButton.addEventListener("click", toggleOndersteMenu);
+});
+
+deMenuH3s.forEach(deMenuH3 => {
+  deMenuH3.addEventListener("click", toggleOndersteMenu);
+});
+
+function toggleOndersteMenu() {
+  let deButtonWaaropGekliktIs = this;
+  let deSectionWaarDeButtonInZit = deButtonWaaropGekliktIs.closest("section");
+  deSectionWaarDeButtonInZit.classList.toggle("open");
+}
 
 // BOEKPAGINA: BOEK AAN FAVORIETEN TOEVOEGEN
 let favorietknop = document.getElementById("favoriet");
@@ -45,5 +69,5 @@ function toevoegenAanFavorieten() {
     favorietknop.src = "./images/voegtoe-unselected.png";
     toggle = false;
   }
-  
+
 }

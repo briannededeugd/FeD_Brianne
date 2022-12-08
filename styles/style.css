@@ -117,6 +117,17 @@ strong {
 
 
 
+/****************/
+/*    STATES    */
+/****************/
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	color: red;
+}
 
 
 
@@ -162,7 +173,7 @@ header nav:first-of-type {
 	right: 0;
 	top: 0;
 	bottom: 0;
-	order: 1000;
+	order: 1;
 	overflow: auto;
 
 	background-color: var(--color-whitespace);
@@ -200,22 +211,34 @@ header nav:first-of-type ul h2 {
 	order: 1000;
 }
 
-header nav:first-of-type a {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
 header nav:first-of-type li {
 	border-top: var(--color-borders) solid 1px;
 	padding: .25em;
 	margin-top: 0;
 }
 
+header nav:first-of-type a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1em;
+}
+
+header nav:first-of-type li a p {
+	order: 100;
+}
+
+
+header > img {
+	order: 2;
+}
+
+
 /* tweede menu met iconen */
 header nav:nth-of-type(2) li {
 	display: inline;
 	margin: auto;
+	order: 3;
 }
 
 header ul {
@@ -223,9 +246,19 @@ header ul {
 	padding: 0;
 }
 
+header nav:nth-of-type(2) ul {
+	display: flex;
+	gap: .75em;
+}
+
 header ul a {
 	text-decoration: none;
 	color: var(--color-text);
+}
+
+header nav:nth-of-type(2) ul img {
+	height: 2em;
+	width: 2em;
 }
 
 header li a {
@@ -236,7 +269,7 @@ header li a {
 
 header>section {
 	display: grid;
-	grid-template-columns: 1fr 3fr 2fr;
+	grid-template-columns: max-content 3fr max-content;
 	grid-template-rows: 1fr;
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
@@ -260,8 +293,8 @@ header form {
 	display: flex;
 	position: relative;
 	width: 100%;
-	flex-shrink: 0;
-	order: 100;
+	grid-column: 1 / -1;
+	order: 4;
 	margin-bottom: 0;
 	background-color: var(--color-achtergronden);
 }
@@ -282,7 +315,7 @@ form button {
 	border: none;
 	background: none;
 	position: absolute;
-	right: 1em;
+	right: 1.5em;
 	top: 1.6em;
 	order: 2;
 }
@@ -382,4 +415,29 @@ footer>section:nth-of-type(2) section {
 footer>img {
 	display: block;
 	margin: 2em auto;
+}
+
+@media (min-width: 72em) {
+	header > section {
+		background-color: var(--color-achtergronden);
+		grid-template-columns: max-content 1fr 4fr max-content;
+		align-items: center;
+		align-content: center;
+	}
+
+	header > section > nav:first-of-type {
+		grid-area: 2 / 1 / 3 / 2;
+	}
+
+	header > section img {
+		grid-area: 2 / 2 / 3 / 3;
+	}
+
+	header > section form {
+		grid-area: 1 / 3 / 3 / 4;
+	}
+
+	header > section > nav:nth-of-type(2) {
+		grid-area: 1 / 4 / 2 / 5;
+	}
 }
