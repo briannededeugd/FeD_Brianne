@@ -97,12 +97,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### de hele pagina: 
   <img src="readme-images/htmlbreakdowns.jpg" width="375px" alt="breakdown van de hele pagina">
 
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
-
 </details>
 
 
@@ -293,7 +287,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit was lastig/Is niet gelukt:
-  Eigenlijk is alles wat ik wilde gelukt - en meer! Als ik meer tijd had gehad, had ik waarschijnlijk meer sections toegevoegd aan de homepagina om het wat voller te laten ogen, maar ik heb alles wat ik van tevoren had gepland wel uit kunnen voeren, dus ik vind niet dat ik mag klagen.
+  Eigenlijk is alles wat ik wilde gelukt. Als ik meer tijd had gehad, had ik waarschijnlijk meer sections toegevoegd aan de homepagina om het wat voller te laten ogen, maar ik heb alles wat ik van tevoren had gepland wel uit kunnen voeren, dus ik vind niet dat ik daarover mag klagen.
+
+  Wat ik wel jammer vind is dat het niet gelukt is om de site donker te maken bij het uitklappen van mijn dropdowns in het menu van het grote scherm. Op zich was dit namelijk gelukt, maar omdat ik het met een transparante div had gedaan die boven de main zat, kon ik vervolgens nergens op klikken. Ik heb dit uiteindelijk maar weggelaten omdat ik er echt niet uitkwam.
 
   <img src="readme-images/homecontent.png" width="375px" alt="bummer">
 </details>
