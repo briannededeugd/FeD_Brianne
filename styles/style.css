@@ -20,16 +20,23 @@ summary {
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
 	--color-text: #111;
+
 	--color-whitespace: #fff;
 	--color-achtergronden: #0300a4;
-	--color-links: #0800ff;
 	--color-borders: #e6e6e8;
 	--color-vlakken: #f0f6ff;
+	--color-hoofdmenu: #6a6a78;
+
+	--color-links: #0800ff;
+	--color-hover: #f0f6fe;
+
 	--color-prijs: red;
 	--color-voordeel: #0c7000;
 	--color-kopen-en-reviews: #febd00;
+	--color-kopen-en-reviews-hover: #fed500;
+
+	--color-select: #19ac3b;
 	--uitklaptijd: .3s;
 }
 
@@ -111,9 +118,24 @@ span {
 }
 
 strong {
-	font-family: Graphik-Bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 600;
 }
 
+em {
+	font-family: Graphik-Bold, Arial, Helvetica, sans-serif;
+	font-weight: 400;
+}
+
+section::-webkit-scrollbar {
+	display: none;
+}
+
+header section>section {
+	display: flex;
+	flex-direction: row;
+	margin: auto 0.5em;
+}
 
 
 
@@ -137,37 +159,76 @@ a:active {
 
 header {
 	color: var(--color-achtergronden);
-	/* width: 100%; */
-	/* margin: 0; */
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 }
 
-/* menu button */
-header>section>button {
+header>section:first-of-type {
+	font-size: small;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 2.5em;
+}
+
+header>section:first-of-type>section {
+	display: flex;
+	align-self: flex-end;
+	margin-left: auto;
+	gap: .5em;
+}
+
+header>section:first-of-type>section>p:first-of-type {
+	font-family: Graphik-Bold, Arial, Helvetica, sans-serif;
 	margin: auto;
-	/* zo weghalen */
+	text-align: right;
+	font-size: 1.2em;
+	color: var(--color-select);
+}
+
+header>section:first-of-type>section>p:last-of-type {
+	color: var(--color-voordeel);
+}
+
+/* menu button */
+header>section:nth-of-type(2)>button:first-of-type {
+	margin-top: .75em;
+	margin-left: .75em;
 	border: none;
 	display: flex;
 	flex-direction: column;
 	order: -100;
-	background-color: var(--color-whitespace);
+	background-color: transparent;
 }
 
-header>section>button span {
+header>section:nth-of-type(2)>button span {
 	display: block;
 	width: 23px;
 	height: 2px;
 	margin-bottom: 5px;
 	position: relative;
 
-	background: var(--color-achtergronden);
+	background-color: var(--color-achtergronden);
 	border-radius: 3px;
 }
 
-/* het uitschuifemenu */
-header nav:first-of-type {
+
+
+
+
+
+
+
+
+
+
+/*****************/
+/* UITSCHUIFMENU */
+/*****************/
+
+header>section:nth-of-type(2) nav:first-of-type {
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -181,13 +242,14 @@ header nav:first-of-type {
 
 	transform: translateX(-100%);
 	z-index: 5;
+	grid-area: 1 / 1 / 2 / 2;
 }
 
-nav:first-of-type.open {
+header>section:nth-of-type(2) nav:first-of-type.open {
 	transform: translateX(0);
 }
 
-header nav:first-of-type button {
+header>section:nth-of-type(2) nav:first-of-type button {
 	background-color: var(--color-whitespace);
 	position: absolute;
 	left: 1.5em;
@@ -196,7 +258,7 @@ header nav:first-of-type button {
 	color: var(--color-links);
 }
 
-header nav:first-of-type ul {
+header>section:nth-of-type(2) nav:first-of-type ul {
 	position: absolute;
 	width: 100%;
 	top: 3.5em;
@@ -204,91 +266,120 @@ header nav:first-of-type ul {
 	padding-right: 1em;
 }
 
-header nav:first-of-type ul h2 {
+header>section:nth-of-type(2) nav:first-of-type ul h2 {
 	font-family: Graphik;
 	font-size: 1em;
 	padding-left: 1em;
 	order: 1000;
 }
 
-header nav:first-of-type li {
+header>section:nth-of-type(2) nav:first-of-type li {
 	border-top: var(--color-borders) solid 1px;
 	padding: .25em;
 	margin-top: 0;
 }
 
-header nav:first-of-type a {
+header>section:nth-of-type(2) nav:first-of-type a {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	gap: 1em;
 }
 
-header nav:first-of-type li a p {
+header>section:nth-of-type(2) nav:first-of-type li a p {
 	order: 100;
 }
 
 
-header > img {
+header>img {
 	order: 2;
 }
 
 
-/* tweede menu met iconen */
-header nav:nth-of-type(2) li {
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************************/
+/* TWEEDE MENU: ICONS (PROFIEL, WENSLIJST, WINKELWAGEN */
+/*******************************************************/
+
+header>section:nth-of-type(2) nav:nth-of-type(2) li {
 	display: inline;
 	margin: auto;
 	order: 3;
 }
 
-header ul {
+header>section:nth-of-type(2) ul {
 	list-style-type: none;
 	padding: 0;
 }
 
-header nav:nth-of-type(2) ul {
+header>section:nth-of-type(2) nav:nth-of-type(2) ul {
 	display: flex;
 	gap: .75em;
 }
 
-header ul a {
+header>section:nth-of-type(2) ul a {
 	text-decoration: none;
 	color: var(--color-text);
 }
 
-header nav:nth-of-type(2) ul img {
-	height: 2em;
-	width: 2em;
+header>section:nth-of-type(2) nav:nth-of-type(2) ul svg {
+	height: 1.5em;
+	width: 1.5em;
+	margin: 0;
 }
 
-header li a {
+header>section:nth-of-type(2) li a {
 	display: inline;
 	margin: .5em;
 }
 
 
-header>section {
+header>section:nth-of-type(2) {
 	display: grid;
 	grid-template-columns: max-content 3fr max-content;
 	grid-template-rows: 1fr;
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
 	width: 100%;
+	align-items: center;
+	align-content: center;
 }
 
-header > section > nav:first-of-type {
-	grid-area: 1 / 1 / 2 / 2;
-}
-
-header > section > a {
+header>section:nth-of-type(2)>a {
 	grid-area: 1 / 2 / 2 / 3;
 }
 
-header > section > nav:nth-of-type(2) {
+header>section:nth-of-type(2)>nav:nth-of-type(2) {
 	grid-area: 1 / 3 / 2 / 4;
+	margin-right: .75em;
 }
 
-/* zoeken */
+
+
+
+
+
+
+
+
+
+
+
+/****************/
+/*    ZOEKEN    */
+/****************/
+
 header form {
 	display: flex;
 	position: relative;
@@ -313,11 +404,257 @@ input[placeholder] {
 
 form button {
 	border: none;
-	background: none;
+	background-color: transparent;
 	position: absolute;
 	right: 1.5em;
 	top: 1.6em;
 	order: 2;
+}
+
+.cls-1 {
+	fill: #2b318e;
+}
+
+header>section:nth-of-type(2)>a:first-of-type svg {
+	width: 10em;
+	height: 5em;
+	margin-left: 1em;
+	margin-bottom: .25em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************/
+/* EXTRA MENU VOOR GROOT SCHERM */
+/********************************/
+
+header>section:nth-of-type(3) {
+	display: flex;
+	padding: 0 auto;
+	width: 100vw;
+	height: 8vh;
+	z-index: 100;
+
+	background-color: transparent;
+	color: var(--color-text) !important;
+}
+
+/* De hele section, dus met beide navs erin */
+header>section:nth-of-type(3)>section {
+	display: flex;
+}
+
+/* De lijst met links, dus niet de dropdowns */
+header>section:nth-of-type(3)>section>ul {
+	align-self: flex-end;
+}
+
+/* De dropdowns */
+header>section:nth-of-type(3)>section>section>button {
+	display: flex;
+	font-family: Graphik, Arial, Helvetica, sans-serif;
+	align-items: center;
+	gap: 1em;
+	background-color: transparent;
+	border: 0;
+}
+
+/* De buttons hebben h3 als button tekst */
+header>section:nth-of-type(3)>section>section>button h3 {
+	font-size: 1em;
+}
+
+/* De iconen (pijltjes) naast de button tekst */
+header>section:nth-of-type(3)>section>section>button img {
+	height: .9em;
+	width: .5em;
+	transform: rotate(90deg);
+}
+
+/* Stijling van de links op zich (rechts) */
+header>section:nth-of-type(3)>ul {
+	list-style-type: none;
+	display: flex;
+	margin-left: auto;
+	align-items: center;
+	gap: 2em;
+	padding: auto;
+}
+
+/* De list items in de ul rechts zijn kleiner */
+header>section:nth-of-type(3)>ul li {
+	font-size: .75em;
+}
+
+/* De linkjes moeten niet blauw zijn, maar de kleur van de tekst hebben */
+header>section:nth-of-type(3)>ul li a {
+	color: var(--color-text);
+}
+
+
+
+/* UITKLAPPEN VAN DE DROPDOWNS */
+header>section:nth-of-type(3)>section>section:first-of-type ul,
+header>section:nth-of-type(3)>section>section:nth-of-type(2)>section,
+header>section:nth-of-type(3)>section>section:nth-of-type(3)>section {
+	/* verstoppen */
+	position: absolute;
+	top: 11.5em;
+	right: 0;
+	left: 0;
+	z-index: 110;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-height: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+	background-color: #fff;
+	opacity: 0;
+	transition: max-height .15s, opacity .15s, visibility 0s;
+
+	/* stijlen */
+	list-style-type: none;
+	border-top: 1px solid var(--color-text);
+}
+
+/* Moet gebeuren bij alle drie op hover */
+header>section:nth-of-type(3)>section button:hover {
+	border-bottom: 3px var(--color-links) solid;
+}
+
+/* Bij hover over Categorieën wordt deze uitgeklapt */
+header>section:nth-of-type(3)>section>section:first-of-type button:hover+ul,
+header>section:nth-of-type(3)>section>section:first-of-type ul:hover {
+	visibility: visible;
+	max-height: 40em;
+	opacity: 100;
+	padding: .5em 3.2em;
+}
+
+/* Bij hover over Cadeaus & Inspiratie wordt deze uitgeklapt */
+header>section:nth-of-type(3)>section>section:nth-of-type(2)>button:hover+section,
+header>section:nth-of-type(3)>section>section:nth-of-type(2)>section:hover {
+	visibility: visible;
+	max-height: 40em;
+	opacity: 100;
+	padding: 0 3.2em;
+}
+
+/* Bij hover over Aanbiedingen wordt deze uitgeklapt */
+header>section:nth-of-type(3)>section>section:nth-of-type(3)>button:hover+section,
+header>section:nth-of-type(3)>section>section:nth-of-type(3)>section:hover {
+	visibility: visible;
+	max-height: 40em;
+	opacity: 100;
+	padding: .5em 3.2em;
+}
+
+
+
+
+
+
+
+
+
+/**********************************************/
+/********** STIJLING DROPDOWN CONTENT *********/
+/**********************************************/
+
+/* ALGEMEEN */
+header>section:nth-of-type(3)>section>section:first-of-type ul li,
+header>section:nth-of-type(3)>section>section:nth-of-type(2)>section ul li,
+header>section:nth-of-type(3)>section>section:nth-of-type(3)>section ul li {
+	margin: .2em;
+}
+
+header>section:nth-of-type(3)>section>section:first-of-type ul li a,
+header>section:nth-of-type(3)>section>section:nth-of-type(2)>section ul li a,
+header>section:nth-of-type(3)>section>section:nth-of-type(3) ul li a {
+	display: flex;
+	text-decoration: none;
+	color: var(--color-text) !important;
+	gap: .5em;
+}
+
+header>section:nth-of-type(3)>section>section:first-of-type ul li a p header>section:nth-of-type(3)>section>section:nth-of-type(2) section ul li a p,
+header>section:nth-of-type(3)>section>section:nth-of-type(3)>section ul li a p {
+	font-size: .85em;
+}
+
+
+/* CATEGORIEËN */
+header>section:nth-of-type(3)>section>section:first-of-type ul li a:hover {
+	background-color: var(--color-hover);
+}
+
+header>section:nth-of-type(3)>section>section:first-of-type ul li a img {
+	order: -1;
+	height: 2.5em;
+	width: 2.5em;
+}
+
+
+/* CADEAUS EN INSPIRATIE +++ AANBIEDINGEN */
+
+/* Rijtjes naast elkaar */
+header>section:nth-of-type(3)>section>section:nth-of-type(2)>section,
+header>section:nth-of-type(3)>section>section:nth-of-type(3)>section {
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	column-gap: 15em;
+}
+
+/* Sections met een header en dan de lijst moeten wel onder elkaar */
+header>section:nth-of-type(3)>section>section:nth-of-type(2)>section>section,
+header>section:nth-of-type(3)>section>section:nth-of-type(3)>section>section {
+	flex-direction: column;
+	margin-top: 0.6em;
+}
+
+/* De titels boven elk rijtje */
+header>section:nth-of-type(3)>section>section:nth-of-type(2)>section>section p,
+header>section:nth-of-type(3)>section>section:nth-of-type(3)>section>section p {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+/* De lijstjes */
+header>section:nth-of-type(3)>section>section:nth-of-type(2)>section>section ul,
+header>section:nth-of-type(3)>section>section:nth-of-type(3)>section>section ul {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 0;
+}
+
+/* De opmaak van alles in de lijstjes */
+header>section:nth-of-type(3)>section>section:nth-of-type(2)>section>section ul li,
+header>section:nth-of-type(3)>section>section:nth-of-type(3)>section>section ul li {
+	color: var(--color-text);
+	font-size: small;
+	margin: 1em auto;
+}
+
+/* Sterretje tekst klein en grijs maken */
+header>section:nth-of-type(3)>section>section:nth-of-type(3)>section>section:first-of-type p:last-of-type {
+	font-size: x-small;
+	color: var(--color-hoofdmenu);
 }
 
 
@@ -359,55 +696,145 @@ footer>section:first-of-type article {
 	flex-direction: row;
 }
 
-/* tweede sectie: de lijst van links */
-footer ul {
+
+
+
+
+/* tweede sectie: lijst naast social media links op groot scherm */
+footer>section:nth-of-type(2) {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr max-content;
+	gap: 0;
+	padding-bottom: 1.75em;
+}
+
+footer>section:nth-of-type(2)>section:not(:last-of-type) {
+	border-bottom: 1px var(--color-borders) solid;
+}
+
+
+/* eerste drie secties van tweede sectie: de lijst van links klapt ook uit */
+footer>section:nth-of-type(2) {
 	list-style-type: none;
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0 .5em;
-	margin: auto;
-	align-items: center;
-	justify-content: center;
+	margin: auto 1em;
+	align-items: self-start;
+	/* justify-content: center; */
+	border-bottom: 1px var(--color-borders) solid;
 }
 
-footer ul li {
+footer>section:nth-of-type(2)>section {
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto 1em;
+	align-items: self-start;
+	width: 100%;
+}
+
+footer>section:nth-of-type(2)>section h3 {
+	padding-top: 1em;
+	flex-grow: 1;
+	font-size: .9em;
+	margin: 0.25em;
+}
+
+footer>section:nth-of-type(2)>section button {
+	width: 3em;
+	aspect-ratio: 1/1;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	font-size: 1em;
+}
+
+footer>section:nth-of-type(2)>section.open {
+	padding-bottom: 1em;
+}
+
+footer>section:nth-of-type(2)>section>button img {
+	transition: var(--uitklaptijd);
+	height: 14px;
+    width: 8px;
+}
+
+footer>section:nth-of-type(2)>section.open>button img {
+	transform: rotate(.25turn);
+	transition: var(--uitklaptijd);
+}
+
+footer>section:nth-of-type(2)>section>ul {
+	list-style-type: none;
+	padding-left: 0;
+	padding-right: 1.5em;
+	width: 100%;
+	margin: 0;
+	transition: var(--uitklaptijd);
+	max-height: 0em;
+	overflow: hidden;
+}
+
+footer>section:nth-of-type(2)>section.open>ul {
+	max-height: 25em;
+	transition: var(--uitklaptijd);
+	margin: auto;
+}
+
+footer>section:nth-of-type(2)>section ul li {
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	border-bottom: var(--color-borders) solid 1px;
-	padding: 1em;
+	padding: 0.25em;
+
+	font-size: smaller;
 }
 
-footer ul a {
+footer>section:nth-of-type(2)>section li:not(:last-of-type) {
+	border-bottom: var(--color-borders) 1px solid;
+}
+
+footer>section>section ul a {
 	color: var(--color-text);
 }
+
+
+
+
+
+
 
 /* tweede sectie: wil je ons volgen? */
 footer>section:first-of-type {
 	margin: 1em auto;
 }
 
-footer>section:nth-of-type(2) {
-	border-bottom: var(--color-borders) 1px solid;
-	padding-bottom: 1em;
-}
-
-footer>section:nth-of-type(2) p {
+footer>section:nth-of-type(2)>section:last-of-type {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	text-align: center;
+	align-items: center;
+	padding: 2em;
 }
 
-footer>section:nth-of-type(2) p:first-of-type {
+footer>section:nth-of-type(2)>section:last-of-type p {
+	text-align: center;
+	margin: 0;
+}
+
+footer>section:nth-of-type(2)>section:last-of-type p:first-of-type {
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 800;
 	text-align: center;
-	margin: 2em;
 }
 
-footer>section:nth-of-type(2) section {
+footer>section:nth-of-type(2)>section:last-of-type>section {
 	display: flex;
 	margin: 1.5em 5em;
-	justify-content: space-between;
+	gap: 2em;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -417,27 +844,228 @@ footer>img {
 	margin: 2em auto;
 }
 
-@media (min-width: 72em) {
-	header > section {
-		background-color: var(--color-achtergronden);
-		grid-template-columns: max-content 1fr 4fr max-content;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 68em) {
+	header>section:first-of-type {
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
+
+	header>section:nth-of-type(3) {
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
+}
+
+@media (min-width: 68em) {
+	header {
+		background: linear-gradient(180deg,
+				rgba(255, 255, 255, 1) 0%,
+				/* wit*/
+				rgba(255, 255, 255, 1) 22%,
+				rgba(3, 0, 164, 1) 22%,
+				/*blauw*/
+				rgba(3, 0, 164, 1) 68%,
+				rgba(255, 255, 255, 1) 68%,
+				rgba(255, 255, 255, 1) 100%);
+		width: 100%;
+	}
+
+	header,
+	main {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
+	header>section:nth-of-type(2) {
+		grid-template-columns: 0fr 1fr 4fr max-content;
 		align-items: center;
 		align-content: center;
 	}
 
-	header > section > nav:first-of-type {
+	header>section:nth-of-type(2)>button,
+	header>section:nth-of-type(2) span {
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
+
+	header>section:nth-of-type(2)>nav:first-of-type {
 		grid-area: 2 / 1 / 3 / 2;
 	}
 
-	header > section img {
+	header>section:nth-of-type(2) img {
 		grid-area: 2 / 2 / 3 / 3;
 	}
 
-	header > section form {
+	header>section:nth-of-type(2) form {
 		grid-area: 1 / 3 / 3 / 4;
 	}
 
-	header > section > nav:nth-of-type(2) {
+	header>section:nth-of-type(2)>nav:nth-of-type(2) {
 		grid-area: 1 / 4 / 2 / 5;
+	}
+
+	.cls-1 {
+		fill: #ffffff;
+	}
+
+
+
+
+
+
+
+
+
+	footer>section:first-of-type {
+		display: flex;
+		gap: 2em;
+		align-items: center;
+		justify-content: center;
+		padding-left: 3em;
+		padding-right: 3em;
+	}
+
+	footer>section:first-of-type article {
+		margin: auto .75em;
+		align-items: center;
+	}
+
+
+
+	footer>section:nth-of-type(2) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 0;
+		padding-bottom: 1.75em;
+	}
+
+	footer>section:nth-of-type(2) section {
+		display: flex;
+		flex-direction: column;
+
+		align-self: start;
+		margin: 0 1em;
+		text-align: left;
+		justify-content: flex-start;
+		font-size: smaller;
+		width: 100%;
+	}
+
+	/* 
+	footer>section:nth-of-type(2) section h3,
+	footer > section:nth-of-type(2) section ul,
+	footer > section:nth-of-type(2) section ul li {
+		width: 100%;
+	} */
+
+	footer>section:nth-of-type(2)>section:last-of-type {
+		align-items: flex-start;
+		margin: 0;
+		padding-top: 1em;
+	}
+
+	footer>section:nth-of-type(2)>section:not(:last-of-type) {
+		border-bottom: none;
+	}
+
+	footer>section:nth-of-type(2)>section:last-of-type>section {
+		flex-direction: row;
+		align-items: flex-start;
+		margin-left: 0;
+		gap: .5em;
+	}
+
+	footer>section:nth-of-type(2)>section h3 {
+		cursor: unset;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 600;
+	}
+
+	footer>section:nth-of-type(2)>section button {
+		display: none;
+	}
+
+	footer>section:nth-of-type(2)>section ul,
+	footer>section:nth-of-type(2)>section.open ul {
+		max-height: 25em;
+	}
+}
+
+@media (min-width: 80em) {
+	header {
+		padding-left: 10em;
+		padding-right: 10em;
+	}
+
+	header>section:nth-of-type(3)>section>section:nth-of-type(2)>section,
+	header>section:nth-of-type(3)>section>section:nth-of-type(3)>section {
+		gap: 0;
+	}
+
+	header>section:nth-of-type(3)>ul,
+	header>section:nth-of-type(3)>section section section {
+		padding-left: 7.5em;
+		padding-right: 10em;
+	}
+
+	header>section:nth-of-type(3)>section>section:first-of-type button:hover+ul,
+	header>section:nth-of-type(3)>section>section:first-of-type ul:hover {
+		padding: .5em 11em;
+	}
+
+
+
+	footer>section:nth-of-type(2) {
+		padding-left: 10em;
+		padding-right: 10em;
+	}
+
+	footer>section:nth-of-type(2)>section:last-of-type img {
+		width: 2em;
+		height: 2em;
+	}
+
+	footer>section:nth-of-type(2)>section:last-of-type p {
+		text-align: left;
+	}
+
+	footer>section:first-of-type {
+		display: flex;
+		gap: 2em;
+		align-items: center;
+		justify-content: center;
+		padding-left: 15em;
+		padding-right: 15em;
 	}
 }

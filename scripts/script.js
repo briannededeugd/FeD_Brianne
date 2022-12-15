@@ -1,30 +1,7 @@
 // JavaScript Document
 console.log("hi");
 
-// HELE HEADER
-let bolLogo = document.querySelector("header > img");
 let deMenuKnop = document.querySelector("header button:first-of-type");
-let profielIcoon = document.querySelector("header > nav:nth-of-type(2) img:first-of-type");
-let wenslijstIcoon = document.querySelector("header > nav:nth-of-type(2) img:nth-of-type(2)");
-let winkelwagenIcoon = document.querySelector("header > nav:nth-of-type(2) img:nth-of-type(3)");
-
-window.addEventListener("resize", menuVeranderen);
-
-function menuVeranderen() {
-  if (screen.width >= 1200) {
-    profielIcoon.src = "./images/profiel-wit.svg";
-    wenslijstIcoon.src = "./images/wenslijst-wit.svg";
-    winkelwagenIcoon.src = "./images/winkelwagen-wit.svg";
-  } else {
-    profielIcoon.src = "./images/profiel.svg";
-    wenslijstIcoon.src = "./images/wenslijst.svg";
-    winkelwagenIcoon.src = "./images/winkelwagen.svg";
-  }
-}
-
-
-
-
 
 // EERSTE MENU [NAV: HAMBURGERMENU]
 let deSluitKnop = document.querySelector("header nav:first-of-type button");
@@ -36,6 +13,11 @@ function toggleMenu() {
   let deNav = document.querySelector("header nav:first-of-type");
   deNav.classList.toggle("open");
 }
+
+
+
+
+
 
 // MENU BOVEN DE FOOTER
 let deMenuButtons = document.querySelectorAll("main > section:nth-of-type(4) button");
@@ -55,18 +37,41 @@ function toggleOndersteMenu() {
   deSectionWaarDeButtonInZit.classList.toggle("open");
 }
 
+
+// MENU IN DE FOOTER (UITKLAPS)
+let footerMenuButtons = document.querySelectorAll("footer > section:nth-of-type(2) button");
+let footerMenuH3s = document.querySelectorAll("footer > section:nth-of-type(2) > section h3");
+
+footerMenuButtons.forEach(footerMenuButton => {
+  footerMenuButton.addEventListener("click", toggleFooterMenu);
+});
+
+footerMenuH3s.forEach(footerMenuH3 => {
+  footerMenuH3.addEventListener("click", toggleFooterMenu);
+});
+
+function toggleFooterMenu() {
+  let footerButtonWaaropGekliktIs = this;
+  let footerSectionWaarDeButtonInZit = footerButtonWaaropGekliktIs.closest("section");
+  footerSectionWaarDeButtonInZit.classList.toggle("open");
+}
+
+
+
+
+
 // BOEKPAGINA: BOEK AAN FAVORIETEN TOEVOEGEN
-let favorietknop = document.getElementById("favoriet");
+let favorietKnop = document.getElementById("favoriet");
 let toggle = false;
 
-favorietknop.addEventListener("click", toevoegenAanFavorieten);
+favorietKnop.addEventListener("click", toevoegenAanFavorieten);
 
 function toevoegenAanFavorieten() {
   if (toggle == false) {
-    favorietknop.src = "./images/voegtoe-selected.png";
+    favorietKnop.src = "./images/voegtoe-selected.png";
     toggle = true;
   } else {
-    favorietknop.src = "./images/voegtoe-unselected.png";
+    favorietKnop.src = "./images/voegtoe-unselected.png";
     toggle = false;
   }
 

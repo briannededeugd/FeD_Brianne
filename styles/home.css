@@ -8,9 +8,9 @@ section {
 }
 
 section > section {
-	display: flex;
-	flex-direction: row;
-	margin: auto .5em;
+    display: flex;
+    flex-direction: row;
+    margin: auto 0.5em;
 }
 
 section article {
@@ -29,6 +29,16 @@ article img {
 	position: relative;
 	order: -1;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 /* Eerste section: duurzaam */
@@ -85,6 +95,16 @@ main > section:nth-of-type(3) > section:first-child > a img {
 }
 
 
+
+
+
+
+
+
+
+
+
+
 /* vierde section: ontdekken */
 main > section:nth-of-type(4) > section {
 	display: flex;
@@ -93,7 +113,7 @@ main > section:nth-of-type(4) > section {
 	align-items: self-start;
 }
  
-main > section:nth-of-type(4) > section:not(:last-child) h3 {
+main > section:nth-of-type(4) > section:not(:last-child) {
 	border-bottom: var(--color-borders) 1px solid;
 }
 
@@ -151,6 +171,18 @@ main > section:nth-of-type(4) > section ul li a {
 	padding: 1em;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 32em) {
 	main > section:nth-of-type(4) > section > button img {
 		order: -100;
@@ -176,6 +208,8 @@ main > section:nth-of-type(4) > section ul li a {
 
 	main > section:nth-of-type(4) > section h3 {
 		cursor: unset;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 600;
 	}
 
 	main > section:nth-of-type(4) button {
@@ -193,7 +227,22 @@ main > section:nth-of-type(4) > section ul li a {
 }
 
 @media (min-width: 72em) {
+	main {
+		margin: auto 8em;
+	}
+	
 	main > section:nth-of-type(4) {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	main > section:first-of-type {
+		position: relative;
+		display: grid;
+		width: 76vw;
+		height: 35vh;
+		background-image: url("../images/duurzaam.jpg");
+		background-size: cover;
+		background-position: center center;
+		margin-top: 0;
 	}
 }
