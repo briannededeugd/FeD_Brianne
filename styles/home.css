@@ -38,9 +38,6 @@ article img {
 
 
 
-
-
-
 /* Eerste section: duurzaam */
 main > section:first-of-type {
 	position: relative;
@@ -64,10 +61,52 @@ main>section:first-of-type button {
 	color: var(--color-whitespace);
 }
 
+main > section:first-of-type button > img {
+	height: 9px;
+	width: 5px;
+}
+
 main>section>section a,
 main>section:first-of-type a {
 	color: var(--color-text);
 }
+
+
+
+
+
+
+
+/* tweede section: categorieën */
+main > section:nth-of-type(2) > ul {
+    display: flex;
+    flex-direction: row;
+    margin: auto 0.5em;
+	list-style-type: none;
+}
+
+main > section:nth-of-type(2) ul li a article {
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+}
+
+main > section:nth-of-type(2) ul li a article h3 {
+    text-align: center;
+    position: relative;
+}
+
+main > section:nth-of-type(2) ul li a article img {
+	height: 20px;
+	width: 20px;
+	margin: auto 0.5em;
+    position: relative;
+    order: -1;
+}
+
+
+
+
 
 
 
@@ -82,10 +121,23 @@ main > section:nth-of-type(3) > section:first-child {
 	justify-content: space-between;
 }
 
-main > section:nth-of-type(3) > section:first-child > a {
+main > section:nth-of-type(3) > section:first-of-type > a {
+	display: flex;
+	color: var(--color-links);
+	align-items: center;
+}
+
+main > section:nth-of-type(3) ul {
+	display: flex;
+	list-style-type: none;
+	justify-content: flex-start;
+	padding-left: 0;
+}
+
+main > section:nth-of-type(3)> ul a {
 	display: flex;
 	align-items: center;
-	color: var(--color-links);
+	color: var(--color-text);
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
@@ -237,8 +289,10 @@ main > section:nth-of-type(4) > section ul li a {
 
 	main > section:first-of-type {
 		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
 		display: grid;
-		width: 76vw;
+		width: 75vw;
 		height: 35vh;
 		background-image: url("../images/duurzaam.jpg");
 		background-size: cover;
