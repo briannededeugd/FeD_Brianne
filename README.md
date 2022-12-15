@@ -257,10 +257,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - svg helemaal in html plakken en dan met fill: in css de kleur veranderen.
+  - in media query de em van images en tekst aanpassen om te scalen
+  - section::-webkit-scrollbar {
+    display:none;
+    }
+    om de scrollbar te verbergen in die ene categorieën.
 
 </details>
 
@@ -270,23 +272,30 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Eindgesprek (week 5)
 
-<details>
+<details open>
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  Pagina 1: De homepagina
+  <img src="readme-images/BriannesBolhome_Kleinscherm.png" width="375px" alt="uitkomst opdracht 1 homepagina klein">
+  <img src="readme-images/BriannesBolhome_Middelscherm.png" width="375px" alt="uitkomst opdracht 1 homepagina middel">
+  <img src="readme-images/BriannesBolhome_Grootscherm.png" width="375px" alt="uitkomst opdracht 1 homepagina groot">
 
+  Pagina 2: De boekpagina
+  <img src="readme-images/BriannesBolboek_Kleinscherm.png" width="375px" alt="uitkomst opdracht 1 boekpagina klein">
+  <img src="readme-images/BriannesBolboek_Middelscherm.png" width="375px" alt="uitkomst opdracht 1 boekpagina middel">
+  <img src="readme-images/BriannesBolboek_Grootscherm.png" width="375px" alt="uitkomst opdracht 1 boekpagina groot">
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Ik heb geleerd hoe ik elementen responsive maak door ze uit te klappen en de code te veranderen, waarbij ik ook heb geleerd hoe ik @media gebruik voor responsiveness. Hierbij ben ik vooral trots op de responsiveness van mijn header en footer, die volgens mij best lijken op de originelen.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/responsivefooter.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Eigenlijk is alles wat ik wilde gelukt - en meer! Als ik meer tijd had gehad, had ik waarschijnlijk meer sections toegevoegd aan de homepagina om het wat voller te laten ogen, maar ik heb alles wat ik van tevoren had gepland wel uit kunnen voeren, dus ik vind niet dat ik mag klagen.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/homecontent.png" width="375px" alt="bummer">
 </details>
 
 
@@ -300,8 +309,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. A Complete Guide To Flexbox: voor align-items, align-content, justify-content en het uitlijnen van icons met tekst.
+    (https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flexbox-properties)
+  2. StackOverflow: om erachter te komen wat de reden was achter het feit dat align-self niet leek te werken. Het kwam omdat ik display: flex gebruikte.
+    (https://stackoverflow.com/questions/61767121/css-flex-box-justify-self-align-self-not-working)
+  3. Developer.mozilla.org: mijn padding-left leek niet te werken, bleek dat het kwam omdat ik op een andere regel voor hetzelfde element een padding-left gebruikte en hij die overnam. Aan de bron had ik dus niet veel, maar het was wel erg informatief. 
+    (https://developer.mozilla.org/en-US/docs/Web/CSS/padding-left)
+  4. Codepen.io: de codepen die we tijdens het tweede voortgangsgesprek volgden heb ik gebruikt voor de responsive dropdowns op home en in mijn footer, met een aantal aanpassingen.
+    (https://codepen.io/shooft/pen/zYamYyx)
+  5. StackOverflow: ik was even kwijt hoe ik ookweer een image netjes naast mijn tekst kon alignen, in een button bijvoorbeeld. Dat was gewoon met justify-content.
+    (https://stackoverflow.com/questions/489340/vertically-align-text-next-to-an-image)
+  6. Codepen.io: voor de responsive header wilde ik graag weten hoe ik op een hover een dropdown kon maken. Ik heb daarvoor een paar dingen uit deze codepen kunnen halen.
+    (https://codepen.io/una/pen/Gxwogy)
+  7. Discourse.webflow.com: Bij de hover van de header moest de rest van de pagina donkerder worden om het contrast te verhogen. Da's gelukt met deze 'tip'.
+    (https://discourse.webflow.com/t/how-do-i-darken-the-rest-of-the-page-behind-a-dropdown-menu/17492)
 
 </details>
