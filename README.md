@@ -43,7 +43,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/bolhome.jpeg" width="375px" alt="de homepagina van bol.com, zonder ingelogd te zijn">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  BOL.COM - elektronica  
+  BOL.COM - boekpagina  
   <img src="readme-images/bolboek.jpeg" width="375px" alt="een boekpagina van bol.com, zonder filters">
  
 </details>
@@ -95,7 +95,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 2e werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="./readme-images/htmlbreakdown.jpg" alt="breakdown van de hele pagina">
+  <img src="readme-images/htmlbreakdowns.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
