@@ -29,12 +29,14 @@ summary {
 	--color-hoofdmenu: #6a6a78;
 
 	--color-links: #0800ff;
+	--color-menu-hover: #4040be;
 	--color-hover: #f0f6fe;
 
 	--color-prijs: red;
 	--color-voordeel: #0c7000;
 	--color-kopen-en-reviews: #febd00;
 	--color-kopen-en-reviews-hover: #fed500;
+	--color-kopen-en-reviews-active: #fda400;
 
 	--color-select: #19ac3b;
 	--uitklaptijd: .3s;
@@ -127,6 +129,10 @@ em {
 	font-weight: 400;
 }
 
+/* i {
+	color: var(--color-kopen-en-reviews);
+} */
+
 section::-webkit-scrollbar {
 	display: none;
 }
@@ -148,8 +154,24 @@ a:hover {
 }
 
 a:active {
-	color: red;
+	color: var(--color-select);
 }
+
+footer > section:nth-of-type(2) > section:last-of-type img:hover {
+	transform: scale(2);
+	padding: .5em;
+}
+
+header > section:nth-of-type(2) > nav:nth-of-type(2) svg:hover {
+	background-color: var(--color-menu-hover);
+	border-radius: 70%;
+}
+
+
+
+
+
+
 
 
 
@@ -243,10 +265,12 @@ header>section:nth-of-type(2) nav:first-of-type {
 	transform: translateX(-100%);
 	z-index: 5;
 	grid-area: 1 / 1 / 2 / 2;
+	display: none;
 }
 
 header>section:nth-of-type(2) nav:first-of-type.open {
 	transform: translateX(0);
+	display: block;
 }
 
 header>section:nth-of-type(2) nav:first-of-type button {
@@ -1004,6 +1028,7 @@ footer>img {
 	footer>section:nth-of-type(2)>section:last-of-type>section {
 		flex-direction: row;
 		align-items: flex-start;
+		justify-content: flex-start;
 		margin-left: 0;
 		gap: .5em;
 	}

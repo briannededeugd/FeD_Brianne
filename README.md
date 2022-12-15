@@ -291,6 +291,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Wat ik wel jammer vind is dat het niet gelukt is om de site donker te maken bij het uitklappen van mijn dropdowns in het menu van het grote scherm. Op zich was dit namelijk gelukt, maar omdat ik het met een transparante div had gedaan die boven de main zat, kon ik vervolgens nergens op klikken. Ik heb dit uiteindelijk maar weggelaten omdat ik er echt niet uitkwam.
 
+  Ook zijn de social media knoppen op een klein scherm niet perfect gecentreerd, helaas.
+
   <img src="readme-images/homecontent.png" width="375px" alt="bummer">
 </details>
 
