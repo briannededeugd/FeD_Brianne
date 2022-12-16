@@ -464,6 +464,14 @@ header>section:nth-of-type(2)>a:first-of-type svg {
 /* EXTRA MENU VOOR GROOT SCHERM */
 /********************************/
 
+header:has(button:hover) > div {
+	position: fixed;
+	inset:0;
+	background-color: #0009;
+
+	z-index: 150;
+}
+
 header>section:nth-of-type(3) {
 	display: flex;
 	width: 100vw;

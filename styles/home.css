@@ -78,11 +78,17 @@ main>section:first-of-type a {
 
 
 /* tweede section: categorieën */
+
+main > section:nth-of-type(2) > section {
+	overscroll-behavior-x: contain;
+}
+
 main > section:nth-of-type(2) > ul {
     display: flex;
     flex-direction: row;
     margin: auto 0.5em;
 	list-style-type: none;
+	
 }
 
 main > section:nth-of-type(2) ul li a article {
